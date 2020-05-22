@@ -1,5 +1,5 @@
 <?php
 
-require 'private/classes/DeveloperManagement.class.php';
+require_once("private/config.php");
 
-new DeveloperManagement();
+$d = new DeveloperManagement();

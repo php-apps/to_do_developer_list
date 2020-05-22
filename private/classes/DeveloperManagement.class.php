@@ -7,7 +7,7 @@ class DeveloperManagement
 {   
     public function addDeveloper($id_role,$f_name,$l_name,$username,$email,$password)
     {
-                
+        $conn = Database::getInstance()->getConnection();   
         $sql = "INSERT INTO user(id_user,id_role,f_name,l_name,username,email,password)
                 VALUES(null,$id_role,'$f_name','$l_name','$username','$email','$password')";
         $query = $conn->query($sql);
@@ -21,6 +21,7 @@ class DeveloperManagement
 
     public function removeDeveloper($email)
     {
+        $conn = Database::getInstance()->getConnection();
         $sql = "DELETE FROM user WHERE email = '$email'";
         $query = $conn->query($sql);
 
@@ -32,6 +33,7 @@ class DeveloperManagement
 
     public function updateDeveloper($email,$update,$value)
     {
+        $conn = Database::getInstance()->getConnection();
         $sql = "UPDATE user SET $update = '$value' WHERE email = '$email'";
         $query = $conn->query($sql);
 
