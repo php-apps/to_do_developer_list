@@ -34,7 +34,7 @@ HTML;
 	// HTML Markup Navigation for logged users
 	public function showMeLoggedNavigation(){
 		$html = <<<HTML
-			<form action='private/logout.php' method='post'>
+			<form action='logout.php' method='post'>
 				<input type='submit' name='logout' value='Logout'>
 			</form>
 			<hr>
@@ -52,9 +52,9 @@ HTML;
 			$row = mysqli_fetch_assoc($result);
 			$id_user = $row['id_user'];
 			$_SESSION['user_id'] = $id_user;
-			header('Location:../');
+			header('Location:../index.php');
 		}else{
-			header('Location:../');
+			header('Location:../index.php');
 		}
 	}
 	// Funtion for retrieve role
@@ -63,8 +63,6 @@ HTML;
 		$sql = "SELECT user.id_user,role.role_type FROM {$this->table} INNER JOIN role ON user.id_role = role.id_role WHERE id_user = {$this->user_id}";
 		$result = mysqli_query($this->conn,$sql);
 		$row = mysqli_fetch_assoc($result);
-		echo "<h2>My ID: {$row['id_user']}</h2>";
-		echo "<h3>Role: {$row['role_type']}</h2><hr>";
 		return $row['role_type'];
 	}
 }
