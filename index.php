@@ -5,7 +5,10 @@ require_once("private/config.php");
 $database = new Database();
 $db = $database->connect();
 $user = new User($db);
+$task = new Task($db);
+$allTask = $task->getAllTasks();
 
+var_dump($allTask);
 
 if($user->logged()){
 	$user_id = $_SESSION['user_id'];
