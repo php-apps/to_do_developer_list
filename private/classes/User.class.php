@@ -65,6 +65,46 @@ HTML;
 		$row = mysqli_fetch_assoc($result);
 		return $row['role_type'];
 	}
+
+    // add user
+	public function addUser($id_role,$f_name,$l_name,$username,$email,$password){
+
+        $sql = "INSERT INTO user(id_user,id_role,f_name,l_name,username,email,password)
+                VALUES(null,$id_role,'$f_name','$l_name','$username','$email','$password')";
+        
+		$query = mysqli_query($this->conn,$sql);
+		
+        if ($query == false) {
+            return false;
+        }
+        return true;
+
+	}
+	
+
+	// remove user
+	 public function removeUser($email){
+		$sql = "DELETE FROM user WHERE email = '$email'";
+		
+        $query = mysqli_query($this->conn,$sql);
+
+        if ($query == false) {
+            return false;
+        }
+        return true;
+	}
+	
+	// update user
+	   public function updateUser($emailAddress,$f_name,$l_name,$username,$email,$password){
+        $sql = "UPDATE user SET f_name = '{$f_name}', l_name = '{$l_name}', username = '{$username}', email = '{$email}', password = $password WHERE email = '$emailAddress'";
+	 
+		$query = mysqli_query($this->conn,$sql);
+
+        if ($query == false) {
+            return false;
+        }
+        return true;        
+    }
 }
 
 ?>
