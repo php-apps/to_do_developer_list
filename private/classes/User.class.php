@@ -109,6 +109,20 @@ HTML;
 		}
                
 	}
+
+	 	public function getAllUsers($db){
+		$sql = "SELECT * FROM user";
+		
+		$query = mysqli_query($this->conn,$sql);
+
+		while($row = mysqli_fetch_assoc($query)){
+
+        $all_users[] = $row; 
+
+         }   
+		return $all_users;
+		
+    }
 	
 }
 
