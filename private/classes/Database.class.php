@@ -1,33 +1,24 @@
 <?php
-// Database created with singleton design pattern
-// Create instance connection like Database::getInstance->getConnection
 class Database
 {
+	// Database parameters
+	private $host = 'localhost';
+	private $username = 'root';
+	private $password = '';
+	private $db_name = 'to_do_developer_list';
+	private $conn;
 
-    private static $instance;
-    public $conn;
+	//Connect to Database and return connection
+	public function connect(){
+		$this->conn = null;
+		//Create connection
+		$this->conn = mysqli_connect($this->host,$this->username,$this->password,$this->db_name);
 
-   
-    private function __construct()
-    {   
-      $this->conn =  new mysqli(HOST,USER,PASS,DB);
-            
-    }
-    
-    public static function getInstance()
-    {
-      if(!self::$instance){
-        self::$instance = new Database();
-        
-      }
-   
-      return self::$instance;
-    }
-  
-    public function getConnection()
-    {
-      return $this->conn;
-      
-    }
+		// Check connection
+		if ($this->conn->connect_error) {
+    		die("Connection failed: " . $conn->connect_error);
+		}
+		return $this->conn;
+	}
 
 }
