@@ -74,10 +74,11 @@ HTML;
         
 		$query = mysqli_query($this->conn,$sql);
 		
-        if ($query == false) {
-            return false;
-        }
-        return true;
+        if ($query) {
+            echo "Success";
+        }else{
+			echo "Failure";
+		}
 
 	}
 	
@@ -88,23 +89,27 @@ HTML;
 		
         $query = mysqli_query($this->conn,$sql);
 
-        if ($query == false) {
-            return false;
-        }
-        return true;
+        if ($query) {
+            echo "Success";
+        }else{
+			echo "Failure";
+		}
 	}
 	
-	// update user
-	   public function updateUser($emailAddress,$f_name,$l_name,$username,$email,$password){
-        $sql = "UPDATE user SET f_name = '{$f_name}', l_name = '{$l_name}', username = '{$username}', email = '{$email}', password = $password WHERE email = '$emailAddress'";
+	// update user, one value at a time
+	   public function updateUser($email,$update,$value){
+        $sql = "UPDATE user SET $update = '$value' WHERE email = '$email'";
 	 
 		$query = mysqli_query($this->conn,$sql);
 
-        if ($query == false) {
-            return false;
-        }
-        return true;        
-    }
+        if ($query) {
+            echo "Success";
+        }else{
+			echo "Failure";
+		}
+               
+	}
+	
 }
 
 ?>
