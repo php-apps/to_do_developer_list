@@ -13,7 +13,6 @@ $task = new Task($db);
 
 // $title = $_POST['title'];
 // $description = $_POST['description'];
-// $date = $_POST['creationDate'];
 
 
 
