@@ -52,7 +52,7 @@ $task = new Task($db);
 /********************************* users list ************* */
 
 
-$all_users = $user->getAllUsers($db);
+$all_users = $user->getAllUsers();
 //print_r($all_users);
 
 echo "<div><h3>Registered users<h3>";
@@ -74,7 +74,7 @@ th, td {
 echo "<table>
        <tr>
         <th>UserId</th>
-        <th>RoleId</th> 
+        <th>RoleType</th> 
         <th>FirstName</th>
         <th>LastName</th>
         <th>Username</th>
@@ -83,7 +83,7 @@ echo "<table>
        </tr>";
     for ( $i = 0; $i<count( $all_users ); $i++ ) {
         $user_id = $all_users[$i]["id_user"];
-        $role_id = $all_users[$i]["id_role"];
+        $role_type = $all_users[$i]["role_type"];
         $f_name  = $all_users[$i]["f_name"];
         $l_name  = $all_users[$i]["l_name"];
         $username= $all_users[$i]["username"];
@@ -92,7 +92,7 @@ echo "<table>
         echo "
         <tr style='padding:10px'>
         <td>$user_id</td>
-        <td>$role_id</td>
+        <td>$role_type</td>
         <td>$f_name</td>
         <td>$l_name</td>
         <td>$username</td>

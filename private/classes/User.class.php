@@ -110,9 +110,8 @@ HTML;
                
 	}
 
-	 	public function getAllUsers($db){
-		$sql = "SELECT * FROM user";
-		
+	 	public function getAllUsers(){
+		$sql = "SELECT user.id_user,user.f_name,user.l_name,user.username,user.email,user.password,role.role_type FROM {$this->table} INNER JOIN role ON user.id_role = role.id_role";
 		$query = mysqli_query($this->conn,$sql);
 
 		while($row = mysqli_fetch_assoc($query)){
