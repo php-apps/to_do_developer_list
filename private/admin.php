@@ -82,19 +82,19 @@ echo "<table>
         <th>Password</th>
        </tr>";
     for ( $i = 0; $i<count( $all_users ); $i++ ) {
-        $user_id = $all_users[$i]["id_user"];
-        $role_type = $all_users[$i]["role_type"];
-        $f_name  = $all_users[$i]["f_name"];
-        $l_name  = $all_users[$i]["l_name"];
+        $userId = $all_users[$i]["id_user"];
+        $roleType = $all_users[$i]["role_type"];
+        $fName  = $all_users[$i]["f_name"];
+        $lName  = $all_users[$i]["l_name"];
         $username= $all_users[$i]["username"];
         $email   = $all_users[$i]["email"];
         $password= $all_users[$i]["password"];
         echo "
         <tr style='padding:10px'>
-        <td>$user_id</td>
-        <td>$role_type</td>
-        <td>$f_name</td>
-        <td>$l_name</td>
+        <td>$userId</td>
+        <td>$roleType</td>
+        <td>$fName</td>
+        <td>$lName</td>
         <td>$username</td>
         <td>$email</td>
         <td>$password</td>
