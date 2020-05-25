@@ -1,6 +1,6 @@
 <?php
 require_once("config.php");
-//$user_id = $_SESSION['user_id']; //That's your admin ID
+//$userId = $_SESSION['userId']; //That's your admin ID
 $database = new Database();
 $db = $database->connect();
 $user = new User($db);
@@ -8,8 +8,8 @@ $user->showMeLoggedNavigation();
 
 $task = new Task($db);
 
-if (isset($_SESSION['user_id'])) {
-	$userTask = $task->getUserTasks($_SESSION['user_id']);
+if (isset($_SESSION['userId'])) {
+	$userTask = $task->getUserTasks($_SESSION['userId']);
 }
 
 var_dump($userTask);
