@@ -67,10 +67,10 @@ HTML;
 	}
 
     // add user
-	public function addUser($idRole,$fName,$lName,$username,$email,$password){
+	public function addUser($fName,$lName,$username,$email,$password){           
 
-        $sql = "INSERT INTO user(id_user,id_role,f_name,l_name,username,email,password)
-                VALUES(null,$idRole,'$fName','$lName','$username','$email','$password')";
+        $sql = "INSERT INTO user(f_name,l_name,username,email,password)
+                VALUES('$fName','$lName','$username','$email','$password')";
         
 		$query = mysqli_query($this->conn,$sql);
 		
