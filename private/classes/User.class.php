@@ -26,6 +26,7 @@ class User{
 				<input type="text" name="username" autocomplete="off" placeholder="Enter username...">
 				<input type='password' name='password' placeholder="Enter password...">
 				<input type='submit' name='submit' value='LogIn'>
+				<a href="public/register.php">New? Register now.</a>
 			</form>
 			<hr>
 HTML;
@@ -122,6 +123,39 @@ HTML;
 		return $allUsers;
 		
     }
+    // HTML markup for register
+	public function showMeRegisterForm(){
+		$html = <<<HTML
+			<button><a href="../index.php">Home</a></button>
+			<hr>
+			<form action="#" method="post">
+				<label for="firstName">First name</label>
+				<input type="text" name="firstName" autocomplete="off"><br>
+				<label for="lastName">Last name</label>
+				<input type="text" name="lastName" autocomplete="off"><br>
+				<label for="username">Username</label>
+				<input type="text" name="username" autocomplete="off"><br>
+				<label for="email">Email</label>
+				<input type="email" name="email" autocomplete="off"><br>
+				<label for="password">Password</label>
+				<input type="password" name="password" autocomplete="off"><br>
+				<input type="submit" name="submit" value="Register">
+			</form>
+HTML;
+		echo $html;
+	}
+	// Check out does username exist in DB
+	public function usernameExist($username){
+		$sql = "SELECT * FROM {$this->table} WHERE username = '{$username}'";
+		$query = mysqli_query($this->conn,$sql);
+		return mysqli_num_rows($query);
+	}
+	// Check out does email exist in DB
+	public function emailExist($email){
+		$sql = "SELECT * FROM {$this->table} WHERE email = '{$email}'";
+		$query = mysqli_query($this->conn,$sql);
+		return mysqli_num_rows($query);
+	}
 	
 }
 
