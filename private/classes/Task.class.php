@@ -24,9 +24,9 @@ class Task {
 	}
 	
 
-    public function addTask($id,$title,$description,$creation_date){
-        $user_id = $id;
-    	$sql = "INSERT INTO {$this->table} VALUES (NULL,'$user_id','$title','$description','$creation_date')";
+    public function addTask($id,$title,$description){
+		$userId = $id;
+    	$sql = "INSERT INTO {$this->table} VALUES (NULL,'$userId','$title','$description',current_timestamp)";
 		$query = mysqli_query($this->conn,$sql);
 		if ($query) {
 			echo "Success";
@@ -35,10 +35,10 @@ class Task {
 		}
     }
 
-    public function updateTask($id_task,$id,$title,$description){
-    	$user_id = $id;
+    public function updateTask($idTask,$id,$title,$description){
+    	$userId = $id;
 
-    	$sql = "UPDATE {$this->table} SET id_user='{$user_id}', title='{$title}', description='{$description}', creation_date=current_timestamp WHERE id_task='{$id_task}'";
+    	$sql = "UPDATE {$this->table} SET id_user='{$userId}', title='{$title}', description='{$description}', creation_date=current_timestamp WHERE id_task='{$idTask}'";
 		$query = mysqli_query($this->conn,$sql);
 		if ($query) {
 			echo "Success";

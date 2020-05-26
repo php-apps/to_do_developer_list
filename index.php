@@ -8,8 +8,8 @@ $user = new User($db);
 
 
 if($user->logged()){
-	$user_id = $_SESSION['user_id'];
-	$role = $user->getRole($user_id);
+	$userId = $_SESSION['userId'];
+	$role = $user->getRole($userId);
 	if($role == 'admin'){
 		header('Location: private/admin.php');
 	}elseif ($role == 'user') {
