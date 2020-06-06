@@ -4,7 +4,7 @@ require_once("config.php");
 $database = new Database();
 $db = $database->connect();
 $user = new User($db);
-$user->showMeLoggedNavigation();
+$user->showMeDevPage();
 
 $task = new Task($db);
 
@@ -12,4 +12,4 @@ if (isset($_SESSION['userId'])) {
 	$userTask = $task->getUserTasks($_SESSION['userId']);
 }
 
-var_dump($userTask);
+// var_dump($userTask);

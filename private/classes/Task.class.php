@@ -55,6 +55,20 @@ class Task {
 		}else{
 			echo "Failure";
 		}
-    }
+	}
+	
+	// Add checked task
+	public function addCheckedTask($idUser,$idTask,$isCompleted)
+	{
+		$sql = "INSERT INTO $this->tableUserTask VALUES(null,{'$idUser'},{'$idTask'},now(),'$isCompleted')";
+
+		$query = mysqli_query($this->conn,$sql);
+
+		if ($query) {
+			echo "Success";
+		}else{
+			echo "Failure";
+		}
+	}
 
 }

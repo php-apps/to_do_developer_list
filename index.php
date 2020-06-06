@@ -16,6 +16,6 @@ if($user->logged()){
 		header('Location: private/developer.php');
 	}
 }else{
-	$user->showMeLoginForm();
+	$user->showMeHomePage();
 }
 ?>

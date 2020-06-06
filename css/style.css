@@ -1,0 +1,504 @@
+:root{
+
+    font-family: 'Exo', sans-serif;
+    color: #A8A8A8;
+    font-size: 18px;
+    text-align: center;
+    padding: 0;
+    margin: 20px;
+    background: #2C2C2C;
+    position: relative;
+}
+
+/**Restart for padding and margin**/
+body,p,h1,h2,h3,h4,h5,h6,ul,li{
+    padding: 0;
+    margin: 0;
+}
+
+/**link**/
+a{
+    color: #A8A8A8;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #f7dd0a;
+}
+
+
+/**style for headings & text**/
+.logo_heading{
+    font-size: 15px;
+}
+.small_text{
+    font-size: 10px;
+}
+
+.text{
+    margin-bottom: 10px;
+}
+
+.text:last-child{
+    margin-bottom: 50px;
+}
+
+
+/**header**/
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+header .small_text{
+    font-size: 6px;
+}
+
+.logo_text{
+    margin-right: auto;
+}
+
+.img_box{
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+.logo{
+    width: 100%; 
+}
+
+/**main**/
+
+main{
+    margin-bottom: 40px;
+    min-height: 300px;
+}
+
+/**button for admin&developer homepage**/
+
+.login{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.admin_login,.developer_login{
+    width: 100%;
+}
+
+.login_data{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom:30px ;
+}
+
+input{
+    width: 80%;
+    margin: 0 auto;
+    margin-top:5px;
+}
+
+.checkbox{
+    width: auto;
+}
+
+.input_text{
+    background: #2C2C2C;
+    border: 0;
+    border-bottom: 1px dashed #f7dd0a;
+    width: 50%;
+    color:#A8A8A8;
+}
+
+.forget_password{
+    margin-right: 30px;
+}
+
+.registration:hover{
+    color: red;
+}
+
+button{
+    background: #2C2C2C;
+    border: 1px solid #A8A8A8;
+    border-radius: 10px;
+    color: #A8A8A8;
+    font-weight: bold;
+    width: 50%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.active, .button:hover {
+    color: #f7dd0a;
+  }
+.button:focus, .active:focus, input:focus, select:focus,option:focus{
+      outline: none;
+  }
+  
+.content {
+    padding:20px;
+    display: none;
+    overflow: hidden;
+    border: 1px solid #A8A8A8;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+
+  /**registration page**/
+
+  .registration_form .login_data ,.registration_form input{
+      text-align: center;
+      align-items: center;
+  }
+
+     select{
+      background: #2C2C2C;
+      color: #A8A8A8;
+      border: 0;
+      border-bottom: 1px dashed #f7dd0a;
+  }
+
+/**admin_page**/
+
+.admin_page header{
+        float: left;
+}
+
+.new_task{
+    border: 0;
+    color: red;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+}
+.fa-plus-square{
+    color: red;
+}
+
+
+/**footer**/
+
+footer{
+    height:auto; 
+    width: 100%;
+    font-size: 12px;
+}
+
+.footer_text{
+    text-transform: uppercase;
+}
+
+footer .text:last-child{
+    margin-bottom: 0;
+    font-size: 12px;
+}
+/**icon for footer**/
+.fab,.far{
+    color:#A8A8A8;
+    font-size: 15px;
+    margin: 10px;
+}
+.fab:hover,.far:hover{
+    color: #f7dd0a;
+}
+
+
+
+
+/**deeveloper page**/
+
+li{
+    list-style: none;
+    font-size: 12px;
+}
+
+.developerpage .content{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.fa-check,.fa-edit,.fa-user-edit{
+    color: green;
+    margin-right: 15px;
+}
+
+.fa-times,.fa-user-minus,.fa-trash-alt{
+    color: red;
+}
+
+.listAllTasks{
+    text-align: justify;
+}
+.listNewTasks li{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.descriptionTask{
+    width: 70%;
+    font-weight: normal;
+    text-align: justify;
+  
+}
+.addTask{
+    width: 30%;
+}
+.listAllTasks ul{
+    margin-bottom: 15px;
+
+}
+
+li ul{
+    margin-left: 5%;
+}
+
+/**admin page**/
+
+.adminPage button{
+    width: 60%;
+}
+
+.admin_page .content{
+    width: 80%;
+}
+
+.allDevelopers li{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.descriptionDeveloper{
+
+    width: 70%;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.editDeveloper{
+    width: 30%;
+}
+
+
+.schedule{
+    text-align: justify;
+
+}
+
+.schedule ul{
+    margin-bottom: 15px;
+
+}
+
+.nameDev{
+    color: #f7dd0a;
+    margin-bottom: 0;
+}
+
+
+
+/**modal**/
+
+.open-button {
+    background-color: none;
+    color: orange;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 280px;
+  }
+
+  .open-button:focus{
+      outline: none;
+  }
+  
+  .form-popup {
+    display: none;
+    border: 1px solid #A8A8A8;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    width: 100%;
+    background-color: none;
+    text-align: center;
+    align-items: center;
+    padding: 60px 0;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=email] {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    background: none;
+    border-bottom: 1px dashed #f7dd0a;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    border: none;
+    cursor: pointer;
+    width: auto;
+    margin-right:15px ;
+    padding: 5px;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: none;
+    padding: 5px;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  
+  .formLabel{
+      display: flex;
+      flex-direction: column;
+      margin: 30px auto;
+      font-size: 15px;
+  }
+
+  .formLabel label{
+      margin-bottom: 10px;
+  }
+
+  .submited{
+      display: flex;
+      flex-direction: row;
+      float: right;
+      margin-right: 40px;
+  }
+
+
+@media (min-width: 992px) {
+
+    /**header**/
+    header{
+        flex-direction: row;
+        float: right;
+        width: 100%;
+    }
+
+    .logo_text{
+        margin-right: 0;
+    }
+
+    .img_box{
+        width: 90px;
+        height: 90px;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    .logo{
+        width: 100%; 
+    }
+
+    /**text**/
+    .text{
+        font-size: 36px;
+    }
+
+     
+
+    main{
+        min-height: 600px;
+    }
+
+    .admin_login{
+        float: right;
+    }
+
+    .content{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .login_data{
+        text-align: center;
+        margin-bottom:30px ;
+    }
+
+    input{
+        width: 50%;
+        margin: 0 auto;
+        margin-top:5px;
+    }
+
+    form button{
+        width: 80%;
+    }
+
+
+        
+    /**registration page**/
+
+    .registration_form{
+        margin-bottom: 80px;
+    }
+    .registration_form input{
+        text-align: center;
+        align-items: center;
+    }
+
+    .registration_form select{
+        background: #2C2C2C;
+        color: #A8A8A8;
+        border: 0;
+        border-bottom: 1px dashed #f7dd0a;
+    }
+
+    .registration_form button{
+        width: 40%;
+    }
+
+    .registration_form .login_data{
+        text-align: center;
+        align-items: center;
+        width: 50%;
+        margin: 10px auto;
+    }
+
+    
+    /**deeveloper page**/
+
+    .developerpage button{
+        font-size: 36px;
+    }
+
+    li{
+        font-size: 18px;
+    }
+
+    .descriptionTask{
+        margin-left:15%;
+    }
+
+    .allTasks{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}

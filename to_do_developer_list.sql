@@ -80,7 +80,7 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `id_role` int(11) NOT NULL,
+  `id_role` int(11) DEFAULT '2',
   `f_name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `l_name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `username` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
@@ -147,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-21 15:07:01
+-- Dump completed on 2020-05-26 21:12:27

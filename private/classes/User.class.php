@@ -19,18 +19,23 @@ class User{
 		if(isset($_SESSION['userId'])) return true;
 		else return false;
 	}
-	// HTML Markups for Login Form
-	public function showMeLoginForm(){
-		$html = <<<HTML
-			<form action="public/login.php" method="post">
-				<input type="text" name="username" autocomplete="off" placeholder="Enter username...">
-				<input type='password' name='password' placeholder="Enter password...">
-				<input type='submit' name='submit' value='LogIn'>
-				<a href="public/register.php">New? Register now.</a>
-			</form>
-			<hr>
-HTML;
-		echo $html;
+	
+	public function showMeHomePage(){
+		require 'views/header.php';
+		require 'views/main/homepage.php';
+		require 'views/footer.php';
+	}
+
+	public function showMeAdminPage($user,$task,$allUsers){
+		require '../views/header.php';
+		require '../views/main/admin.php';
+		require '../views/footer.php';
+	}
+
+	public function showMeDevPage(){
+		require '../views/header.php';
+		require '../views/main/developer.php';
+		require '../views/footer.php';
 	}
 	// HTML Markup Navigation for logged users
 	public function showMeLoggedNavigation(){
