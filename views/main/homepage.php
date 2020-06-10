@@ -1,10 +1,10 @@
 <main>
         <div class="container">
 
-            <p class="text"> Admin si i imaš svoj team developera ? </p>
-            <p class="text">Developer si i dio si team-a?</p> 
-            <p class="text">Potreban ti je pregledan raspored svih zadataka?</p>     
-            <p class="text"> Na pravome si mjestu!</p>
+            <p class="text"> You are an Administrator and you have <br> your own team of developers ? </p>
+            <p class="text"> You are a developer and part of a team ? </p> 
+            <p class="text"> Need a clear schedule of all tasks ? </p>     
+            <p class="text"> You are in the right place ! </p>
 
             <div class="login">
                 <?php require 'views/login/admin_login.php'; ?>
