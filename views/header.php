@@ -23,7 +23,10 @@
     <!--google font-->
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-
+    <!--JavaScript-->
+    <script defer type="text/javascript" src="http://localhost/to_do_developer_list/js/collapsible.js"></script>
+    <script defer type="text/javascript" src="http://localhost/to_do_developer_list/js/openCloseForm.js"></script>   
+    
 </head>
 <body>
 <header>
